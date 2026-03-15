@@ -1,14 +1,14 @@
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
-        seen = set()
         left = 0
         longest = 0
 
-        for right in range(len(s)):
-            while s[right] in seen:
-                seen.remove(s[left])
+        counter: dict[str,int] = defaultdict(int)
+        for r in range(len(s)):
+            counter[s[r]] +=1 # for each character at index r, we add it to our coutner dict
+            while counter[s[r]]  > 1:  # if the character added appears more then once
+                                    # we have aduplicate and need to remove it
+                counter[s[left]] -=1 # close left window to remove duplicate
                 left += 1
-            seen.add(s[right])
-            longest = max(longest, right - left + 1)    
-
+            longest = max(longest, r - left + 1)
         return longest
