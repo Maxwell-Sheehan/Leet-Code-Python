@@ -9,3 +9,6 @@ class Solution:
         else: #it's even or odd so only two cases
             # if odd return the middle
             return array[length // 2]
+
+# this actually should fail, it's 
+# O((M+N)log(M+N))
