@@ -12,7 +12,5 @@ class Solution:
         
         left_depth = self.maxDepth(root.left) 
         right_depth = self.maxDepth(root.right)
-
-        depth = 1 + max(left_depth, right_depth)
         
-        return depth
+        return 1 + max(left_depth, right_depth)
