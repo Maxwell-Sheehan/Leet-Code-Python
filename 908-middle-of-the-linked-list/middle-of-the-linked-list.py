@@ -5,10 +5,9 @@
 #         self.next = next
 class Solution:
     def middleNode(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        slow = fast = head # set everything equal to the head of the linked list
-        while fast and fast.next: #while fast and fast.next are both still valid 
-            fast = fast.next.next #fast moves forward two spaces
-            slow = slow.next #slow moves forward one space
+        slow = fast = head
 
-        return slow #when the list ends slow is going to be in teh middle
-        
+        while fast and fast.next:
+            fast = fast.next.next
+            slow = slow.next
+        return slow
