@@ -9,6 +9,7 @@ class Solution:
             counter[s[r]] += 1
             while counter[s[r]] > 1:
                 counter[s[left]] -= 1
-                left +=1
-            longest = max(longest, r - left +1)
+                left += 1
+            longest = max(longest, r - left + 1)
         return longest
+        
