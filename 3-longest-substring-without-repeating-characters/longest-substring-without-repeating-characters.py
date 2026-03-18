@@ -4,6 +4,7 @@ class Solution:
         longest = 0
 
         counter: dict[str,int] = defaultdict(int)
+
         for r in range(len(s)):
             counter[s[r]] += 1
             while counter[s[r]] > 1:
