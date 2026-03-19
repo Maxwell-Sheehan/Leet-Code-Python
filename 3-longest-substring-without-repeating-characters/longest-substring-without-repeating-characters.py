@@ -5,11 +5,10 @@ class Solution:
 
         counter: dict[str,int] = defaultdict(int)
 
-        for r in range(len(s)):
-            counter[s[r]] += 1
-            while counter[s[r]] > 1:
-                counter[s[left]] -= 1
+        for right in range(len(s)):
+            counter[s[right]] += 1
+            while counter[s[right]] > 1:
+                counter[s[left]] -=1
                 left += 1
-            longest = max(longest, r - left + 1)
+            longest = max(longest, right - left + 1)
         return longest
-        
