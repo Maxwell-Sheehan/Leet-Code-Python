@@ -18,10 +18,10 @@ class Solution:
             if l2:
                 total += l2.val
                 l2 = l2.next
-
+            
             num = total % 10
             carry = total // 10
             head.next = ListNode(num)
             head = head.next
+
         return tail.next
-       
