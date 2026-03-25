@@ -13,7 +13,7 @@ class Solution:
 
         if not root:
             return []
-        
+
         while len(queue) > 0:
             n = len(queue)
             new_level = []
@@ -26,3 +26,4 @@ class Solution:
                         queue.append(child)
             res.append(new_level)
         return res
+
