@@ -9,7 +9,4 @@ class Solution:
 
             total += num
             res = max(res, total)
-
         return res
-
-
