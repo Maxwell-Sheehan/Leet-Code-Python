@@ -3,7 +3,7 @@ class Solution:
         seen = {}
 
         for i, num in enumerate(nums):
-            compliment = target - num
-            if compliment in seen:
-                return [seen[compliment], i]
+            x = target - num
+            if x in seen:
+                return [seen[x],i]
             seen[num] = i
