@@ -1,6 +1,6 @@
-# Definition for a binary tree node.
-
 from collections import deque
+
+# Definition for a binary tree node.
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
@@ -11,19 +11,19 @@ class Solution:
         res = []
         queue = deque([root])
 
-        if not root: 
+        if not root:
             return []
 
         while len(queue) > 0:
             n = len(queue)
             new_level = []
-
+            
             for i in range(n):
                 node = queue.popleft()
                 new_level.append(node.val)
-
                 for child in [node.left, node.right]:
                     if child is not None:
                         queue.append(child)
             res.append(new_level)
         return res
+
