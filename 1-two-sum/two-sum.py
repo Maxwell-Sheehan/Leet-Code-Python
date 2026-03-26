@@ -3,7 +3,8 @@ class Solution:
         seen = {}
 
         for i, num in enumerate(nums):
-            other_num = target - num
-            if other_num in seen:
-                return [seen[other_num], i]
+            compliment = target-num
+
+            if compliment in seen:
+                return [seen[compliment], i]
             seen[num] = i
