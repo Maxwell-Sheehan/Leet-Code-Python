@@ -23,5 +23,4 @@ class Solution:
                     if child is not None:
                         queue.append(child)
             res.append(new_level)
-
         return res
