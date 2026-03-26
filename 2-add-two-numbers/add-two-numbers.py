@@ -8,7 +8,8 @@ class Solution:
         head = ListNode(0)
         tail = head
 
-        total = carry = 0
+        carry = total = 0
+
         while l1 or l2 or carry:
             total = carry
             if l1:
@@ -24,4 +25,4 @@ class Solution:
             head = head.next
 
         return tail.next
-        
+            
