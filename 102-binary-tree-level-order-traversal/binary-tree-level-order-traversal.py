@@ -1,5 +1,5 @@
-from collections import deque
 # Definition for a binary tree node.
+from collections import deque
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
