@@ -9,7 +9,6 @@ class Solution:
             counter[s[right]] += 1
             while counter[s[right]] > 1:
                 counter[s[left]] -=1
-                left +=1
+                left += 1
             longest = max(longest, right - left + 1)
-
         return longest
