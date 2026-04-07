@@ -7,6 +7,7 @@ class Solution:
             if i > 0 and nums[i] == nums[i-1]:
                 continue
 
+            
             j = i + 1
             k = len(nums) - 1
 
@@ -25,4 +26,3 @@ class Solution:
                         j += 1
 
         return res
-
