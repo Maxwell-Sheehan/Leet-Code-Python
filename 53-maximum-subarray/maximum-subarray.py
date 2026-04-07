@@ -8,5 +8,5 @@ class Solution:
                 total = 0
 
             total += num
-            res = max(total, res)
+            res = max(res, total)
         return res
