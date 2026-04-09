@@ -1,7 +1,7 @@
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
-        left = 0
         longest = 0
+        left = 0
 
         counter: dict[str:int] = defaultdict(int)
 
@@ -10,7 +10,5 @@ class Solution:
             while counter[s[right]] > 1:
                 counter[s[left]] -= 1
                 left +=1
-
             longest = max(longest, right - left + 1)
-
         return longest
