@@ -5,14 +5,16 @@ class TreeNode:
         self.val = val
         self.left = left
         self.right = right
+
 class Solution:
     def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
+
         if not root:
             return []
 
-        queue = deque([root])
         res = []
-
+        queue = deque([root])
+        
         while len(queue) > 0:
             n = len(queue)
             new_level = []
