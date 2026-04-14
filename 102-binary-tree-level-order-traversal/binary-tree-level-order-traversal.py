@@ -1,5 +1,6 @@
 # Definition for a binary tree node.
 from collections import deque
+
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
@@ -8,17 +9,16 @@ class TreeNode:
 
 class Solution:
     def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
+        res = []
 
         if not root:
             return []
 
-        res = []
         queue = deque([root])
-        
+
         while len(queue) > 0:
             n = len(queue)
             new_level = []
-
             for i in range(n):
                 node = queue.popleft()
                 new_level.append(node.val)
