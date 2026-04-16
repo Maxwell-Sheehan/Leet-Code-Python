@@ -6,19 +6,19 @@ class TreeNode:
         self.val = val
         self.left = left
         self.right = right
-
 class Solution:
     def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
-        res = []
 
+        res  = []
+        queue = deque([root])
+        
         if not root:
             return []
 
-        queue = deque([root])
-
+        
         while len(queue) > 0:
-            n = len(queue)
             new_level = []
+            n = len(queue)
             for i in range(n):
                 node = queue.popleft()
                 new_level.append(node.val)
@@ -26,4 +26,5 @@ class Solution:
                     if child is not None:
                         queue.append(child)
             res.append(new_level)
+            
         return res
