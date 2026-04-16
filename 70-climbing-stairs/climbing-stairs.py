@@ -7,10 +7,11 @@ class Solution:
         prev_step2 = 2
         curr = 0
 
-        for i in range(3,n):
-
+        for i in range(3, n):
+            
             curr = prev_step + prev_step2
             prev_step2 = prev_step
             prev_step = curr
 
         return curr
+
