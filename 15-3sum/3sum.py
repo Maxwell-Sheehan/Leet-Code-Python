@@ -11,7 +11,7 @@ class Solution:
             k = len(nums) - 1
 
             while j < k:
-                total = nums[i] + nums[j] + nums[k]
+                total = nums[j] + nums[i] + nums[k]
 
                 if total > 0:
                     k -=1
