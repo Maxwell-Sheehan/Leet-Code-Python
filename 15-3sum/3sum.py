@@ -13,10 +13,10 @@ class Solution:
             while j < k:
                 total = nums[i] + nums[j] + nums[k]
 
-                if total > 0:
-                    k -= 1
-                elif total < 0:
+                if total < 0:
                     j += 1
+                elif total > 0:
+                    k -= 1
                 
                 else:
                     res.append([nums[i], nums[j], nums[k]])
