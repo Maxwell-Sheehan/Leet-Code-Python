@@ -2,7 +2,6 @@ class Solution:
     def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
         if len(nums1) > len(nums2):
             return self.findMedianSortedArrays(nums2, nums1)
-
         
         len1 = len(nums1)
         len2 = len(nums2)
@@ -26,11 +25,8 @@ class Solution:
                 else:
                     return max(max_left1, max_left2)
 
-            
             elif max_left1 > min_right2:
-
-                right = part1 - 1
+                right = part1 -1
 
             else:
                 left = part1 + 1
-
