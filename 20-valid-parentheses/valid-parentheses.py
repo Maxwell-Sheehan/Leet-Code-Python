@@ -7,6 +7,7 @@ class Solution:
             if char in map.values():
                 stack.append(char)
             elif char in map.keys():
-                if not stack or map[char] != stack.pop():
+                if not stack or stack.pop() != map[char]:
                     return False
-        return not stack 
+
+        return not stack
