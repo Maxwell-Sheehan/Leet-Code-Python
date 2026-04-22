@@ -6,6 +6,6 @@ class Solution:
             compliment = target - num
 
             if compliment in seen:
-                return[seen[compliment], i]
+                return [seen[compliment], i]
 
             seen[num] = i
