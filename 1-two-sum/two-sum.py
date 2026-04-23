@@ -3,6 +3,7 @@ class Solution:
         seen = {}
 
         for i, num in enumerate(nums):
+
             compliment = target - num
 
             if compliment in seen:
