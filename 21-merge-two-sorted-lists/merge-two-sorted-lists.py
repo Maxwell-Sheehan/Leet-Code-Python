@@ -15,7 +15,7 @@ class Solution:
             else:
                 head.next = list2
                 list2 = list2.next
-
+            
             head = head.next
         
         head.next = list1 if list1 else list2
