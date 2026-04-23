@@ -6,7 +6,8 @@ class Solution:
         for num in nums:
             if total < 0:
                 total = 0
-
+            
             total += num
-            res = max(res, total)
+            res = max(res,total)
+        
         return res
