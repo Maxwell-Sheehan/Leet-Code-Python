@@ -8,14 +8,12 @@ class TreeNode:
         self.right = right
 class Solution:
     def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
-        
-
-        queue = deque([root])
-        res = []
-
         if not root:
             return []
 
+        res = []
+        queue = deque([root])
+        
         while len(queue) > 0:
             new_level = []
             n = len(queue)
