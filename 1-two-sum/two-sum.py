@@ -7,4 +7,4 @@ class Solution:
 
             if compliment in seen:
                 return [seen[compliment], i]
-            seen[num] = i 
+            seen[num] = i
