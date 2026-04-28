@@ -1,6 +1,5 @@
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
-        
         output = [1] * len(nums)
 
         left = 1
