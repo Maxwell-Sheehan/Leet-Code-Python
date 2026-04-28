@@ -4,10 +4,9 @@ class Solution:
         total = 0
 
         for num in nums:
-            while total < 0:
+            if total < 0:
                 total = 0
-            
+
             total += num
             res = max(res, total)
-        
         return res
