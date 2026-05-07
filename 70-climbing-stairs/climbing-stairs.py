@@ -3,7 +3,6 @@ class Solution:
         if n <= 3:
             return n
 
-        
         curr = 0
         prev_step = 3
         prev_step2 = 2
