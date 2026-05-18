@@ -13,5 +13,5 @@ class Solution:
         for i in range(len(nums) -1, -1, -1):
             output[i] *= right
             right *= nums[i]
-        
+
         return output
