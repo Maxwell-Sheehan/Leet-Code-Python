@@ -11,4 +11,5 @@ class Solution:
             curr = prev_step + prev_step2
             prev_step2 = prev_step
             prev_step = curr
+
         return curr
