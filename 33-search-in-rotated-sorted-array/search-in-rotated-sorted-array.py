@@ -12,8 +12,7 @@ class Solution:
                 if nums[left] <= target <= nums[m]:
                     right = m - 1
                 else:
-                    left = m + 1
-            
+                    left = m +1
             else:
                 if nums[m] <= target <= nums[right]:
                     left = m + 1
