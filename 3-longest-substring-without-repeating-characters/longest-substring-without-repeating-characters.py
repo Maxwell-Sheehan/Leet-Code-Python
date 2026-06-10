@@ -3,7 +3,7 @@ class Solution:
         left = 0
         longest = 0
 
-        counter: dict[str,int] = defaultdict(int)
+        counter: dict[str, int] = defaultdict(int)
 
         for right in range(len(s)):
             counter[s[right]] += 1
